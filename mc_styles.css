@@ -1,0 +1,36 @@
+@import "utf-8";
+
+/*
+    Millennium Computers Styles CSS 
+
+    Name: Ethan Gruenemeier
+    Date: 1.16.19
+
+    This document includes all styles of the webpage for the ordering form of a computer.
+ */
+
+/* This is effects evrey single element and sets the box sizing to border box */
+* {
+    box-sizing: border-box;
+}
+
+/* This effectst the HTML element and sets the background to an image that doesn;t repeat and sets the height to 100% along with setting all the margins to 0. */
+html {
+    background: beige;
+    height: 100%;
+    margin: auto;
+}
+
+/* This affectst the body and makes the content centered by defining the max and min widths and then setting the margins to auto, finally the font family is selected. */
+body {
+    max-width: 1100px;
+    min-width: 700px;
+    width: 100%;
+    margin: auto;
+}
+
+header>h1 {
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px black;
+}
