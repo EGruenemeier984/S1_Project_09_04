@@ -7,8 +7,8 @@
     <!-- 
         Millenium Computers Form
 
-        Name: Ethan Grunemeier
-        Date: 1.16.19
+        Name  Ethan Grunemeier
+        Date  1.16.19
      -->
 
     <meta charset="utf-8" />
@@ -24,23 +24,112 @@
 
     <header>
         <h1>Millenium Computers</h1>
+        <hr>
     </header>
     <h2>Order Form</h2>
-    <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
-        <fieldset>
+    <form name="cForm" action="http //www.mill_computers.com/orders/process.cgi" method="POST">
+        <fieldset id="pInfo">
             <legend>Personal Information</legend>
+            <div class="fRow">
+                <label for="fName">First Name</label>
+                <input type="text" name="fName" id="fName" />
+            </div>
 
-            <label for="fName">First Name:</label>
-            <input type="text" name="fName" id="fName" />
+            <div class="fRow">
+                <label for="lName">Last Name</label>
+                <input type="text" name="lName" id="lName" />
+            </div>
 
-            <label for="lName">Last Name:</label>
-            <input type="text" name="lName" id="lName" />
+            <div class="fRow">
+                <label for="street">Street</label>
+                <input type="text" name="street" id="street" />
+            </div>
 
-            <label for="street">Street:</label>
-            <input type="text" name="street" id="street" />
+            <div class="fRow">
+                <label for="city">City </label>
+                <input type="text" name="city" id="city" />
+            </div>
+
+            <div class="fRow">
+                <label for="state">State </label>
+                <input type="text" name="state" id="state" />
+            </div>
+
+            <div class="fRow">
+                <label for="zip">Zip Code </label>
+                <input type="text" name="zip" id="zip" />
+            </div>
+
+            <div class="fRow">
+                <label for="phone">Phone Number </label>
+                <input type="tel" name="phone" id="phone" />
+            </div>
         </fieldset>
-        <fieldset>
+
+        <fieldset id="cInfo">
             <legend>Computer Information</legend>
+            <div class="fRow">
+                <label for="pSpeed">Processor Speed</label>
+                <select name="pSpeed" id="pSpeed">
+                    <option value="3.2GHz">3.2 GHz</option>
+                    <option value="4.0GHz">4.0 GHz</option>
+                    <option value="5.2GHz">5.2 GHz</option>
+                </select>
+            </div>
+
+            <div class="fRow">
+                <label for="mem">Memory</label>
+                <select name="mem" id="mem">
+                    <option value="1GB">1GB</option>
+                    <option value="2GB">2GB</option>
+                    <option value="4GB">4GB</option>
+                    <option value="8GB">8GB</option>
+                </select>
+            </div>
+
+            <div class="fRow">
+                <label for="monitor">Monitor Size</label>
+                <select name="monitor" id="monitor">
+                    <option value="15in">15"</option>
+                    <option value="17in">17"</option>
+                    <option value="19in">19"</option>
+                    <option value="27in">27"</option>
+                </select>
+            </div>
+
+            <div class="fRow">
+                <label for="hd">Hard Drive Storage</label>
+                <select name="hd" id="hd">
+                    <option value="240GB">240GB</option>
+                    <option value="500GB">500GB</option>
+                    <option value="750GB">4GB</option>
+                    <option value="1TB">1TB</option>
+                </select>
+            </div>
+
+            <div class="fRow">
+                <label for="dvd">DVD Drive/Burner</label>
+                <input type="radio" name="dvd" id="dvd" value="yes" />
+                <input type="radio" name="dvd" id="dvd" value="no" />
+            </div>
+
+            <div class="fRow">
+                <label for="tuner">Tuner Card</label>
+                <input type="radio" name="tuner" id="tuner" value="yes" />
+                <input type="radio" name="tuner" id="tuner" value="no" />
+            </div>
+
+            <div class="fRow">
+                <label for="mcard">Media Card Reader</label>
+                <input type="radio" name="mcard" id="mcard" value="yes" />
+                <input type="radio" name="mcard" id="mcard" value="no" />
+            </div>
+
+            <div class="fRow">
+                <label for="warranty"></label>
+            </div>
+
+
         </fieldset>
     </form>
     <script src="mc_script.js"></script>
