@@ -16,122 +16,155 @@
     <title>Millennium Computers</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- links to the CSS files  -->
     <link rel="stylesheet" href="mc_forms.css" />
     <link rel="stylesheet" href="mc_styles.css" />
+    <!-- This is the google font link -->
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
 </head>
 
 <body>
-
+    <!-- this is the header that contains  a heading. -->
     <header>
         <h1>Millenium Computers</h1>
-        <hr>
     </header>
-    <h2>Order Form</h2>
-    <form name="cForm" action="http //www.mill_computers.com/orders/process.cgi" method="POST">
-        <fieldset id="pInfo">
-            <legend>Personal Information</legend>
-            <div class="fRow">
-                <label for="fName">First Name</label>
-                <input type="text" name="fName" id="fName" />
+    <!-- This is the start of the form that is named cForm and has the action along with the method of post. -->
+    <form name="cForm" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+        <!-- This is the first fieldset that contains evreything in the form -->
+        <fieldset id="main">
+            <legend>Order Form</legend>
+            <!-- This is another fieldset that contains all of the personal information -->
+            <fieldset id="pInfo">
+                <legend>Personal Information</legend>
+                <div class="fRow">
+                    <label for="fName">First Name</label>
+                    <input type="text" name="fName" id="fName" />
+                </div>
+
+                <div class="fRow">
+                    <label for="lName">Last Name</label>
+                    <input type="text" name="lName" id="lName" />
+                </div>
+
+                <div class="fRow">
+                    <label for="street">Street</label>
+                    <input type="text" name="street" id="street" />
+                </div>
+
+                <div class="fRow">
+                    <label for="city">City </label>
+                    <input type="text" name="city" id="city" />
+                </div>
+
+                <div class="fRow">
+                    <label for="state">State </label>
+                    <input type="text" name="state" id="state" />
+                </div>
+
+                <div class="fRow">
+                    <label for="zip">Zip Code </label>
+                    <input type="text" name="zip" id="zip" pattern="^\d{5}(-\d{4})?$" />
+                </div>
+
+                <div class="fRow">
+                    <label for="phone">Phone Number </label>
+                    <input type="tel" name="phone" id="phone" pattern="^d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+                </div>
+
+            </fieldset>
+            <!-- This fieldset contains the information reguarding the computer specifications -->
+            <fieldset id="cInfo">
+                <legend>Computer Information</legend>
+                <div class="fRow">
+                    <label for="pSpeed">Processor Speed</label>
+                    <select name="pSpeed" id="pSpeed">
+                        <option value="3.2GHz">3.2 GHz</option>
+                        <option value="4.0GHz">4.0 GHz</option>
+                        <option value="5.2GHz">5.2 GHz</option>
+                    </select>
+                </div>
+
+                <div class="fRow">
+                    <label for="mem">Memory</label>
+                    <select name="mem" id="mem">
+                        <option value="1GB">1GB</option>
+                        <option value="2GB">2GB</option>
+                        <option value="4GB">4GB</option>
+                        <option value="8GB">8GB</option>
+                    </select>
+                </div>
+
+                <div class="fRow">
+                    <label for="monitor">Monitor Size</label>
+                    <select name="monitor" id="monitor">
+                        <option value="15in">15"</option>
+                        <option value="17in">17"</option>
+                        <option value="19in">19"</option>
+                        <option value="27in">27"</option>
+                    </select>
+                </div>
+
+                <div class="fRow">
+                    <label for="hd">Hard Drive Storage</label>
+                    <select name="hd" id="hd">
+                        <option value="240GB">240GB</option>
+                        <option value="500GB">500GB</option>
+                        <option value="750GB">4GB</option>
+                        <option value="1TB">1TB</option>
+                    </select>
+                </div>
+
+                <div class="fRow">
+                    <label for="dvd">DVD Drive/Burner</label>
+                    Yes
+                    <input type="radio" name="dvd" id="dvd" value="yes" />
+                    No
+                    <input type="radio" name="dvd" id="dvd" value="no" />
+                </div>
+
+                <div class="fRow">
+                    <label for="tuner">Tuner Card</label>
+                    Yes
+                    <input type="radio" name="tuner" id="tuner" value="yes" />
+                    No
+                    <input type="radio" name="tuner" id="tuner" value="no" />
+                </div>
+
+                <div class="fRow">
+                    <label for="mcard">Media Card Reader</label>
+                    Yes
+                    <input type="radio" name="mcard" id="mcard" value="yes" />
+                    No
+                    <input type="radio" name="mcard" id="mcard" value="no" />
+                </div>
+
+
+            </fieldset>
+            <!-- This fieldset is the last fieldset that contains the warranty and comments section. -->
+            <fieldset id="middleSet">
+                <div class="fRow">
+                    <label for="warranty">Check here if you would like a 24-month extended warranty</label>
+                    <input type="checkbox" name="warranty" id="warranty" />
+                </div>
+
+                <div class="fRow">
+                    <label for="cBox">Comments regaurding your order:</label>
+                    <textarea name="cBox" id="cBox"></textarea>
+                </div>
+            </fieldset>
+            <!-- These are the submit and cancel buttons for the form. -->
+            <div id="buttons">
+                <input type="submit" value="Submit My Survey" />
+                <input type="reset" value="Cancel" />
             </div>
 
-            <div class="fRow">
-                <label for="lName">Last Name</label>
-                <input type="text" name="lName" id="lName" />
-            </div>
-
-            <div class="fRow">
-                <label for="street">Street</label>
-                <input type="text" name="street" id="street" />
-            </div>
-
-            <div class="fRow">
-                <label for="city">City </label>
-                <input type="text" name="city" id="city" />
-            </div>
-
-            <div class="fRow">
-                <label for="state">State </label>
-                <input type="text" name="state" id="state" />
-            </div>
-
-            <div class="fRow">
-                <label for="zip">Zip Code </label>
-                <input type="text" name="zip" id="zip" />
-            </div>
-
-            <div class="fRow">
-                <label for="phone">Phone Number </label>
-                <input type="tel" name="phone" id="phone" />
-            </div>
         </fieldset>
-
-        <fieldset id="cInfo">
-            <legend>Computer Information</legend>
-            <div class="fRow">
-                <label for="pSpeed">Processor Speed</label>
-                <select name="pSpeed" id="pSpeed">
-                    <option value="3.2GHz">3.2 GHz</option>
-                    <option value="4.0GHz">4.0 GHz</option>
-                    <option value="5.2GHz">5.2 GHz</option>
-                </select>
-            </div>
-
-            <div class="fRow">
-                <label for="mem">Memory</label>
-                <select name="mem" id="mem">
-                    <option value="1GB">1GB</option>
-                    <option value="2GB">2GB</option>
-                    <option value="4GB">4GB</option>
-                    <option value="8GB">8GB</option>
-                </select>
-            </div>
-
-            <div class="fRow">
-                <label for="monitor">Monitor Size</label>
-                <select name="monitor" id="monitor">
-                    <option value="15in">15"</option>
-                    <option value="17in">17"</option>
-                    <option value="19in">19"</option>
-                    <option value="27in">27"</option>
-                </select>
-            </div>
-
-            <div class="fRow">
-                <label for="hd">Hard Drive Storage</label>
-                <select name="hd" id="hd">
-                    <option value="240GB">240GB</option>
-                    <option value="500GB">500GB</option>
-                    <option value="750GB">4GB</option>
-                    <option value="1TB">1TB</option>
-                </select>
-            </div>
-
-            <div class="fRow">
-                <label for="dvd">DVD Drive/Burner</label>
-                <input type="radio" name="dvd" id="dvd" value="yes" />
-                <input type="radio" name="dvd" id="dvd" value="no" />
-            </div>
-
-            <div class="fRow">
-                <label for="tuner">Tuner Card</label>
-                <input type="radio" name="tuner" id="tuner" value="yes" />
-                <input type="radio" name="tuner" id="tuner" value="no" />
-            </div>
-
-            <div class="fRow">
-                <label for="mcard">Media Card Reader</label>
-                <input type="radio" name="mcard" id="mcard" value="yes" />
-                <input type="radio" name="mcard" id="mcard" value="no" />
-            </div>
-
-            <div class="fRow">
-                <label for="warranty"></label>
-            </div>
-
-
-        </fieldset>
+        <!-- This is the footer of the page -->
     </form>
+    <footer>
+        Created by Ethan Grunemeier
+    </footer>
+    <!-- link to the js file provided for us -->
     <script src="mc_script.js"></script>
 </body>
 

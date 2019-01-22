@@ -8,23 +8,24 @@
  */
 
 /* Form Layout */
-
+/* This effects the form element and sets the overflow to hidden. */
 form {
     overflow: hidden;
 }
 
+/* This effects the id cInfo and sets the width to 50% and floats to the right. */
 #cInfo {
-    display: grid;
+    width: 50%;
     float: right;
-    width: 45%;
 }
 
+/* This effect the id pInfo and sets the width and floats the content. */
 #pInfo {
-    display: grid;
-    float: left;
     width: 45%;
+    float: left;
 }
 
+/* This effects the fieldset elements and sets the border radius, the text size, the padding and the margins. */
 fieldset {
     border-radius: 20px;
     font-size: 1em;
@@ -32,32 +33,58 @@ fieldset {
     margin: 10px
 }
 
+/* This effects the divs with the class of fRow. Sets the bottom margins to 1em. */
 div.fRow {
     margin-bottom: 1em;
 }
 
+/* This effects the inputs with the types of text and tel. floats the content right and clears both sides. */
 input[type="text"],
 input[type="tel"] {
     float: right;
     clear: both;
 }
 
+/* This effects the div with the ID of buttons and aligns the text plus the width is set to 100%. */
+div#buttons {
+    text-align: center;
+    width: 100%;
+}
+
+/* This effets the inputs with the type of submit and reset while setting the text size, the padding, and the margins. */
+input[type='submit'],
+input[type='reset'] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 15px;
+}
+
 /* Validation Styles */
+/* This effects the input, select, and textarea elements with the psuedo class of focus and sets the background color to an RGB value. */
 input:focus,
 select:focus,
 textarea:focus {
     background-color: rgb(220, 255, 220);
 }
 
-input#name:focus:valid,
+/* This effects the input tags in the personal info fieldset that are valid and set the background color to RGB. */
+input#fName:focus:valid,
+input#lName:focus:valid,
+input#street:focus:valid,
+input#city:focus:valid,
+input#state:focus:valid,
 input#zip:focus:valid,
 input#phone:focus:valid,
 input#email:focus:valid {
     background: rgb(220, 255, 220) url(mc_go.png) bottom right/contain no-repeat;
 }
 
-
-input#name:focus:invalid,
+/* This effects the input tags in the personal info fieldset that are invalid and sets the background color and puts up an x image. */
+input#fName:focus:invalid,
+input#lName:focus:invalid,
+input#street:focus:invalid,
+input#city:focus:invalid,
+input#state:focus:invalid,
 input#zip:focus:invalid,
 input#phone:focus:invalid,
 input#email:focus:invalid {

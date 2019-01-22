@@ -16,21 +16,85 @@
 
 /* This effectst the HTML element and sets the background to an image that doesn;t repeat and sets the height to 100% along with setting all the margins to 0. */
 html {
-    background: beige;
     height: 100%;
     margin: auto;
 }
 
 /* This affectst the body and makes the content centered by defining the max and min widths and then setting the margins to auto, finally the font family is selected. */
 body {
+    background: #908372;
     max-width: 1100px;
     min-width: 700px;
     width: 100%;
     margin: auto;
+    font-family: 'Signika', sans-serif;
 }
 
+/* This effects the h1 tag thats in the header. This aligns the text to the center and specifies the size of the text along with including a border style. */
 header>h1 {
     text-align: center;
     font-size: 3em;
     text-shadow: 2px black;
+    border: 5px dotted #D6A27A;
+    border-radius: 2em;
+}
+
+/* This effects the input tags and textarea ones and makes the border radius 1 em in diameter. */
+input,
+textarea {
+    border-radius: 1em;
+}
+
+/* This effects the input and the text area elements when focused on and gets rid of the outline when selected. */
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* This effects the id of cBox and sets the width, height and the top margins of the textarea box. */
+#cBox {
+    margin-top: 10px;
+    height: 100px;
+    width: 95%;
+}
+
+/* This effects the label elements and sets the color to a hexadecimal. */
+label {
+    color: #F3F1E5;
+}
+
+/* This effects the fieldset with the id of middleSet and sets the width, margins, and border properties. */
+fieldset#middleSet {
+    width: 50%;
+    margin: auto;
+    border: none;
+}
+
+/* This effects the fieldsets with the IDS of pInfo and cInfo and gets rid of any border. */
+fieldset#pInfo,
+fieldset#cInfo {
+    border: none;
+}
+
+/* This effects the fieldset with the ID of main and sets the border property */
+fieldset#main {
+    border: 5px groove #282828;
+}
+
+/* This effects the legend element thats directy inside of the fieldset with the id of main and changes the font size as well as the color.*/
+fieldset#main>legend {
+    font-size: 2em;
+    color: #282828;
+}
+
+/* This effects the legend elements directly nested inside either pInfo or cInfo and sets the border on the bottom and also sets the color. */
+#pInfo>legend,
+#cInfo>legend {
+    border-bottom: 6px solid #D6A27A;
+    color: #282828;
+}
+
+/* This effects the footer tag and aligns the content to the center. */
+footer {
+    text-align: center;
 }
